@@ -11,7 +11,19 @@ const Cards = () => {
                 <Card key = { uniqid() } team = {team}/>
             );
         });
+
+        shuffle(cards);
+
         return cards;
+    }
+
+    const shuffle = (cards) => {
+        for(let i = cards.length - 1; i > 0; i--){
+            const randomIndex = Math.floor(Math.random() * (i + 1));
+            const temp = cards[i];
+            cards[i] = cards[randomIndex];
+            cards[randomIndex] = temp;
+        }
     }
 
     return(

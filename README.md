@@ -9,7 +9,7 @@ A memory testing project to practice React Hooks.
   - [x] project name.
   - [x] scores (current score, high score, possible score).
   - [x] rules on how to play the game.
-- [ ] Display cards for each item in random order.
+- [x] Display cards for each item in random order.
 - [ ] Change card order each time an item is clicked.
 - [ ] Keep track of each clicked item
 - [ ] Display "You lose" message when an item is clicked more than once
