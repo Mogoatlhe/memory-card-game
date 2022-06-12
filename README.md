@@ -4,11 +4,11 @@ A memory testing project to practice React Hooks.
 
 ## Core Requirements:
 
-- [ ] Display header
+- [x] Display header
   - must contain:
-  - [ ] project name.
-  - [ ] scores (current score, high score, possible score).
-  - [ ] rules on how to play the game.
+  - [x] project name.
+  - [x] scores (current score, high score, possible score).
+  - [x] rules on how to play the game.
 - [ ] Display cards for each item in random order.
 - [ ] Change card order each time an item is clicked.
 - [ ] Keep track of each clicked item
