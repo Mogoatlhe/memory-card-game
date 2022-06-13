@@ -1,12 +1,11 @@
 import React from "react";
-import teamsData from "../data/teams";
 import uniqid from "uniqid";
 import Card from "./Card";
 
-const Cards = () => {
+const Cards = (props) => {
     const displayCards = () => {
         const cards = [];
-        teamsData.forEach(team => {
+        props.teamsData.forEach(team => {
             cards.push(
                 <Card key = { uniqid() } team = {team}/>
             );

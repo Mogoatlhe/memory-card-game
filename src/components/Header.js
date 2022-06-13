@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const Header = () => {
-
-    const [currScore, setCurrScore] = useState(0);
-    const [highScore, setHighScore] = useState(0);
+const Header = (props) => {
 
     return(
         <div id = "header">
@@ -17,11 +14,11 @@ const Header = () => {
             </div>
             <div id = "header-right">
                 <p id = "current-score">
-                    current score: <span> { currScore }
+                    current score: <span> { props.currScore }
                         </span> 
                 </p>
                 <p id = "high-score">
-                    high score: <span> { highScore } </span>
+                    high score: <span> { props.highScore } </span>
                 </p>
                 <p id = "possible-score">
                     possibe score: <span>20</span>
