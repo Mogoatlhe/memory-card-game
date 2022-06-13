@@ -12,8 +12,8 @@ A memory testing project to practice React Hooks.
 - [x] Display cards for each item in random order.
 - [x] Change card order each time an item is clicked.
 - [x] Keep track of each clicked item
-- [ ] Display "You lose" message when an item is clicked more than once
-- [ ] Display "You win" message when all the items have been clicked at most once.
+- [x] Display "You lose" message when an item is clicked more than once
+- [x] Display "You win" message when all the items have been clicked at most once.
 - [x] Reset clicked items after loss/win.
 
 ## Design
