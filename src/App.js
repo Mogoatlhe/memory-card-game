@@ -28,6 +28,7 @@ const App = () => {
         incrementHighScore();
 
         if(highScore >= 19){
+          setCurrScore(0);
           resetTeams();
         }
 
