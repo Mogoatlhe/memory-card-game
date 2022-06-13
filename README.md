@@ -14,7 +14,7 @@ A memory testing project to practice React Hooks.
 - [x] Keep track of each clicked item
 - [ ] Display "You lose" message when an item is clicked more than once
 - [ ] Display "You win" message when all the items have been clicked at most once.
-- [ ] Reset clicked items after loss/win.
+- [x] Reset clicked items after loss/win.
 
 ## Design
 

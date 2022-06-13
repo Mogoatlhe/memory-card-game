@@ -12,7 +12,11 @@ const App = () => {
 
   useEffect(() => {
 
-    const incrementCurrScore = (e) => {
+    const resetTeams = () => {
+      teamsData.forEach(team => team.clicked = false);
+    }
+
+    const updateScore = (e) => {
       const target = e.currentTarget;
       const currTeamName = target.querySelector(".team-name").textContent;
       const currTeamIndex = teams.findIndex(team => team.name === currTeamName);
@@ -22,8 +26,14 @@ const App = () => {
         setTeams(teamsData);
         setCurrScore(currScore + 1);
         incrementHighScore();
+
+        if(highScore >= 19){
+          resetTeams();
+        }
+
       }else{
         setCurrScore(0);
+        resetTeams();
       }
 
     };
@@ -36,11 +46,11 @@ const App = () => {
 
     const cards = document.querySelectorAll(".card-container");
     [...cards].forEach(card => {
-      card.addEventListener("click", incrementCurrScore);
+      card.addEventListener("click", updateScore);
     });
 
     return () => {
-      [...cards].forEach(card => card.removeEventListener("click", incrementCurrScore))
+      [...cards].forEach(card => card.removeEventListener("click", updateScore));
     };
   }, [currScore, highScore, teams]);
 
