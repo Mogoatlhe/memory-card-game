@@ -3,6 +3,7 @@ import Cards from './components/Cards';
 import Header from './components/Header';
 import { useState, useEffect } from 'react';
 import teamsData from "./data/teams";
+import Swal from 'sweetalert2'
 
 const App = () => {
 
@@ -11,6 +12,14 @@ const App = () => {
   const [teams, setTeams] = useState(teamsData);
 
   useEffect(() => {
+
+    const displayModal = (icon, title) => {
+      Swal.fire({
+        icon: icon,
+        title: title,
+        text: "Play Again",
+      });
+    }
 
     const resetTeams = () => {
       teamsData.forEach(team => team.clicked = false);
@@ -27,14 +36,16 @@ const App = () => {
         setCurrScore(currScore + 1);
         incrementHighScore();
 
-        if(highScore >= 19){
+        if(currScore >= 19){
           setCurrScore(0);
           resetTeams();
+          displayModal("success", "Congrats... you got lucky", );
         }
 
       }else{
         setCurrScore(0);
         resetTeams();
+        displayModal("error", "Oops... you lose");
       }
 
     };
